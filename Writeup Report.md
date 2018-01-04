@@ -1,8 +1,5 @@
-# Search-and-Sample
-Autonomous rover locates rock samples and navigates environment by determining navigable terrain
-
 ## Project: Search and Sample Return
-### Writeup Template: You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+Autonomous rover locates rock samples and navigates environment by determining navigable terrain
 
 ---
 
@@ -14,8 +11,8 @@ Autonomous rover locates rock samples and navigates environment by determining n
 * Download the simulator and take data in "Training Mode"
 * Test out the functions in the Jupyter Notebook provided
 * Add functions to detect obstacles and samples of interest (golden rocks)
-* Fill in the `process_image()` function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw images to a map.  The `output_image` you create in this step should demonstrate that your mapping pipeline works.
-* Use `moviepy` to process the images in your saved dataset with the `process_image()` function.  Include the video you produce as part of your submission.
+* Fill in the `process_image()` function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw images to a map.  The `output_image` created in this step should demonstrate that the mapping pipeline works.
+* Use `moviepy` to process the images in the saved dataset with the `process_image()` function.  Include the video produced as part of the submission.
 
 **Autonomous Navigation / Mapping**
 
@@ -35,11 +32,9 @@ You're reading it!
 
 ### Notebook Analysis
 #### 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
-Here is an example of how to include an image in your writeup.
 
 
-#### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result. 
-And another! 
+#### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result.  
 
 ### Autonomous Navigation and Mapping
 
