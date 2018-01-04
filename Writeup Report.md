@@ -43,10 +43,12 @@ You're reading it!
 
 #### 2. Launching in autonomous mode your rover can navigate and map autonomously.  Explain your results and how you might improve them in your writeup.  
 
+Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.
 
-
+My initial approach has simply been to complete the project. At the end of the term, I plan to come back to each project and expand beyond what is simply required to have a passing project. The only techniques that I used to complete this project are exactly those that were taught in this course. I performed perspective transform and color thresholds to scan pictures in real time and decide what to do next. We used each picture to determine a navigable angle direction and a distance (length of nav_angles) that represented what a navigable distance is. The rover had been given many default values including what was an appropriate distance for needing to stop, what was an appropriate max throttle and velocity, and etc. I compared the incoming nav_angle length generated from each picture to the values for stopping distance, so that my rover would stop and turn if necessary to produce a better navigable angle to pursue to further the mapping completion. Generally, the rover did not stop much. The rover simply changed angles and ran around. Eventually the map would become more and more complete with time (even if the rover was not smart enough to avoid areas already visited). I did not change any of these values and my rover seemed to navigate just fine. Changing some of these values may enable the rover to complete a full mapping of the environment much faster, but I have yet to play around with that. If I could improve my code to improve the rover, I would prvide a way for the rover to not visit areas it has already visited unless picking up a rock. Obviously,  another natural progression would be to get the rover to pick up all the rocks and bring them back to the point of origin.
+ 
 #### Graphics Settings: 
-Screen resolution: 1024 x 768
-Graphics Quality: Good
-Windowed: Yes
-FPS: 33
+* Screen resolution: 1024 x 768
+* Graphics Quality: Good
+* Windowed: Yes
+* FPS: 33
