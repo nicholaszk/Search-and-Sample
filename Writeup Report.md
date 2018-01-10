@@ -40,8 +40,9 @@ You're reading it!
 
 [//]: # (Image References)
 
-[image1]: ./rover image 1.png
-[image2]: ./rover image 2.png
+[image1]: ./rover%20image%201.PNG
+[image2]: ./rover%20image%202.PNG
+ 
 
 #### 1. Fill in the `perception_step()` (at the bottom of the `perception.py` script) and `decision_step()` (in `decision.py`) functions in the autonomous mapping scripts and an explanation is provided in the writeup of how and why these functions were modified as they were.
 
@@ -60,7 +61,11 @@ In my perception file, I used perspective transform and color thresholding to sc
 
 For the decision step function, the first thing we did was determine whether or not the perception step created nav_angles. If not, the rover simply moves forward at the throttle setpoint until it runs into something. The rover had been given many default values including what was an appropriate distance for needing to stop, what was an appropriate max throttle and velocity, and etc. If nav_angles was not 'None', the rover acted based on whether the rover mode was set to 'stop' or 'forward.' If the rover was already set to move forward, the length of nav_angles was compared to the safe stopping distance for the rover (Rover.stop_forward) to determine whether the rover should stop or keep moving. If nav_angles was larger than forward_stop, we keep going, throttling if we're less than the max velocity setpoint and coasting with zero throttle if we're already at the max velocity. If nav_angles is less than stop_forward, the rover brakes.This same logic is applied to the case where the rover was initially stopping. If the navigable distance based off of nav_angles is sufficient, the rover starts moving again, but turns towards the navigable angle. If the distance of nav_angles is not great enough, the rover keeps off the throttle and turns 15 degrees before it decides what to do again.
 
-Generally, the rover did not stop much. The rover simply changed angles and ran around. Eventually the map would become more and more complete with time (even if the rover was not smart enough to avoid areas already visited). I did not change any of the default values and my rover seemed to navigate just fine. Changing some of these values may enable the rover to complete a full mapping of the environment much faster, but I have yet to play around with that. If I could improve my code to improve the rover, I would prvide a way for the rover to not visit areas it has already visited unless picking up a rock. Obviously,  another natural progression would be to get the rover to pick up all the rocks and bring them back to the point of origin.
+Generally, the rover did not stop much. The rover simply changed angles and ran around. Eventually the map would become more and more complete with time (even if the rover was not smart enough to avoid areas already visited). However, while the completion percentage of the map increased, the fidelity steadily went down overtime.
+
+![alt text][image2]
+
+I did not change any of the default values and my rover seemed to navigate just fine. Changing some of these values may enable the rover to complete a full mapping of the environment much faster, but I have yet to play around with that. If I could improve my code to improve the rover, I would prvide a way for the rover to not visit areas it has already visited unless picking up a rock. Obviously,  another natural progression would be to get the rover to pick up all the rocks and bring them back to the point of origin.
  
 #### Graphics Settings: 
 * Screen resolution: 1024 x 768
