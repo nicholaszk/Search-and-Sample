@@ -38,6 +38,11 @@ You're reading it!
 
 ### Autonomous Navigation and Mapping
 
+[//]: # (Image References)
+
+[image1]: ./rover image 1.png
+[image2]: ./rover image 2.png
+
 #### 1. Fill in the `perception_step()` (at the bottom of the `perception.py` script) and `decision_step()` (in `decision.py`) functions in the autonomous mapping scripts and an explanation is provided in the writeup of how and why these functions were modified as they were.
 
 
@@ -46,6 +51,10 @@ You're reading it!
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.
 
 My initial approach has simply been to complete the project. At the end of the term, I plan to come back to each project and expand beyond what is simply required to have a passing project. The only techniques that I used to complete this project are exactly those that were taught in this course. 
+
+In the following picture you can see that I've met the minimum requirements.
+
+![alt text][image1]
 
 In my perception file, I used perspective transform and color thresholding to scan pictures in real time and decide what to do next. Additional functions included rover_coords(), rotate_pix(), translate_pix(), and pix_to_world() from the prior lessons which I used to map the rover and the pixels it sees to the world map. I used a find_rocks() function to search pictures for rocks by finding pixels within a specific RGB range that isolated yellow color. Using all these functions, my perception step updated the on-screen world map for automnomous mode by recoloring the pixels based on incoming and past images that have been processed. Navigable terrain was kept blue, obstacles were changed to red, and rock smaples were changed to green. Lastly, the picture was converted to polar coordinates to determine a navigable angle to move towards. This was done by averaging the angle of every pixel that was determined to be navigable. This navigable angle became an important input for the following decision step.
 
