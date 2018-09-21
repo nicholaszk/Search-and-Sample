@@ -1,5 +1,5 @@
 ## Project: Search and Sample Return
-Autonomous rover locates rock samples and navigates environment by determining navigable terrain
+Autonomous rover locates rock samples and navigates environment by determining navigable terrain.
 
 ---
 
